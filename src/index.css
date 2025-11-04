@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(211, 211, 211);
   padding: 10px;
 }
 #root {
@@ -39,13 +39,15 @@ body {
   padding: 5px 0;
 }
 .listaCat button {
+  background-color: #ffffff;
   flex-shrink: 0;
   font-size: 20px;
-  width: 125px;
+  width: 150px;
+  height: 60px;
   padding: 5px;
   border: none;
   color: rgb(26, 26, 26);
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 4px #00000030, 0px 4px 8px #00000015, inset 0px 1px 2px #ffffff50;
   border-radius: 15px;
   transition: all 0.3s ease;
 }
@@ -61,12 +63,13 @@ body {
   padding-bottom: 80px;
 }
 .producto {
+  background-color: white;
   justify-content: space-between;
   display: flex;
   border-radius: 15px;
   padding: 10px;
   gap: 10px;
-  background-color: white;
+  box-shadow: 0px 2px 4px #00000030, 0px 4px 8px #00000015, inset 0px 1px 2px #ffffff50;
 }
 .precio {
   color: orangered;
