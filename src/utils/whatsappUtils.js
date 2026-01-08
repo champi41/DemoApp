@@ -7,7 +7,7 @@ const WHATSAPP_NUMBER = "56936163861"; // Reemplaza con tu número (sin + o 00)
  * Genera el enlace final de WhatsApp con el resumen del pedido.
  */
 const formatPrice = (price) => {
-  // Asegúrate de que price sea un número
+
   if (typeof price !== "number") return "$0";
 
   return price.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
@@ -41,29 +41,24 @@ export const generateWhatsAppLink = (carrito, datosCliente, totalPagar) => {
 
   // 3. ARMADO DEL MENSAJE COMPLETO
   const message = `
-*🎉 NUEVO PEDIDO WEB 🎉*
+
 ¡Hola! Mi nombre es ${nombre} y este es mi pedido:
-
 ---
-*CARRITO:*
 ${itemsList}
-
-*TOTAL:* ${formatPrice(totalPagar)}
 ---
-    
-*OPCIONES:*
+TOTAL: ${formatPrice(totalPagar)}
+---
+DETALLES:
 - Entrega: ${entregaTexto}
 - Pago: ${metodoPago}
 - Palitos: ${cantidadPalitos || 0} unidades
 - Notas (Salsas/Otros): ${salsas || "Sin notas adicionales"}
     
-*📞 Favor, confirmar disponibilidad y total final.*
+📞 Favor, confirmar disponibilidad y total final.
 `;
-
   // 4. GENERAR EL ENLACE
   // El mensaje debe codificarse para URL (urlencode)
   const encodedMessage = encodeURIComponent(message);
-
   // Retorna el enlace directo a la API de WhatsApp
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
 };
