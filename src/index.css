@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0 0 90px;
 }
 .header {
   padding: 10px 10px;
@@ -153,7 +154,7 @@ body {
 .toast-notification {
   /* Fija la posición en la parte inferior de la pantalla */
   position: fixed;
-  bottom: 30px;
+  bottom: 90px;
   left: 50%;
   transform: translateX(-50%); /* Centra horizontalmente */
 
@@ -169,7 +170,7 @@ body {
   animation: fadeIn 0.5s, fadeOut 0.5s 2.5s; /* Entra en 0.5s, sale en 0.5s después de 2.5s */
 }
 .carrito {
-  padding: 10px 10px 80px;
+  padding: 10px 10px 90px;
 }
 .carrito h3 {
   font-size: 30px;
@@ -246,13 +247,13 @@ body {
   }
   to {
     opacity: 1;
-    bottom: 30px;
+    bottom: 90px;
   }
 }
 @keyframes fadeOut {
   from {
     opacity: 1;
-    bottom: 30px;
+    bottom: 90px;
   }
   to {
     opacity: 0;
@@ -274,7 +275,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 10px 10px 80px;
+  padding: 10px 10px 90px;
 }
 .checkout-container h2{
   font-size: 35px;
