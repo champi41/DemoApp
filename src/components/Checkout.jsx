@@ -42,7 +42,7 @@ const Checkout = ({ carrito, datosCliente, setDatosCliente, onVolver }) => {
     <div className="checkout-container">
       <header className="hcheckout">
         <button className="btn-volver" onClick={onVolver}>
-          Atras
+          Volver
         </button>
         <h2>Checkout</h2>
       </header>

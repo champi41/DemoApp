@@ -72,6 +72,7 @@ function App() {
             onDecrease={handleDecreaseQuantity}
             onRemove={handleRemoveItem}
             onContinuarPedido={() => setActiveVista(VISTAS.CHECKOUT)}
+            onVolver={() => setActiveVista(VISTAS.HOME)}
           ></Carrito>
         );
       case VISTAS.CHECKOUT:

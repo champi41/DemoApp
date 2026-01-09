@@ -10,6 +10,7 @@ const Carrito = ({
   onDecrease,
   onRemove,
   onContinuarPedido,
+  onVolver
 }) => {
   // Calcula el subtotal total de todos los ítems
   const subtotal = carrito.reduce(
@@ -28,7 +29,10 @@ const Carrito = ({
   }
   return (
     <div className="carrito">
-      <h3>Mi Pedido</h3>
+      <header className="hcarrito">
+        <button onClick={onVolver}>Volver</button>
+        <h3>Mi Pedido</h3>
+      </header>
 
       {/* LISTA DE ÍTEMS EN EL CARRITO */}
       <div className="lista-carrito">
