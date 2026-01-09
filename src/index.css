@@ -28,17 +28,17 @@ body {
 .home {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 0 0 90px;
+  padding: 0 0 95px;
 }
 .header {
-  padding: 10px 10px;
+  font-size: 20px;
+  padding: 10px;
   color: #ff0300;
 }
 .categorias {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
   padding-left: 10px;
   color: #ffd396;
 }
@@ -126,7 +126,7 @@ body {
   border-radius: 3rem;
   background-color: rgba(255, 255, 255, 0);
   backdrop-filter: blur(5px);
-  gap: 10px;
+  gap: 5px;
   box-shadow: var(--shadow-l);
   padding: 5px;
 }
@@ -135,12 +135,20 @@ body {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0);
   border: none;
-  border-radius: 3rem;
   padding: 5px 7px;
   transition: all 0.3s ease;
 }
+.barra #home{
+  border-radius: 50px 10px 10px 50px;
+}
+.barra #carro{
+  border-radius: 10px;
+}
+.barra #check{
+  border-radius: 10px 50px 50px 10px;
+}
 .barra img {
-  height: 50px;
+  height: 55px;
 }
 .barra button p {
   font-size: 15px;
@@ -152,8 +160,8 @@ body {
   border-radius: 20px;
 }
 .barra .vista-button.active {
-  background-color: rgba(0, 0, 0, 0.25);
-  box-shadow: var(--shadow-s);
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-m);
   transition: all 0.3s ease;
 }
 /* Posiciona la notificación */
@@ -176,7 +184,7 @@ body {
   animation: fadeIn 0.5s, fadeOut 0.5s 2.5s; /* Entra en 0.5s, sale en 0.5s después de 2.5s */
 }
 .carrito {
-  padding: 10px 10px 90px;
+  padding: 10px 10px 95px;
   color: white;
 }
 .hcarrito {
@@ -299,7 +307,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 10px 10px 90px;
+  padding: 10px 10px 95px;
 }
 .hcheckout {
   align-items: center;

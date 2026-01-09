@@ -6,6 +6,7 @@ const Barra = ({onVistaChange, activeVista, vistas, cantidad}) => {
     <div className="fondo">
       <div className="barra">
         <button
+          id="home"
           className={`vista-button ${
             activeVista === vistas.HOME ? "active" : ""
           }`}
@@ -14,6 +15,7 @@ const Barra = ({onVistaChange, activeVista, vistas, cantidad}) => {
           <img src={home} alt="Home" />
         </button>
         <button
+          id="carro"
           className={`vista-button ${
             activeVista === vistas.CARRITO ? "active" : ""
           }`}
@@ -23,6 +25,7 @@ const Barra = ({onVistaChange, activeVista, vistas, cantidad}) => {
           <p>{cantidad}</p>
         </button>
         <button
+          id="check"
           className={`vista-button ${
             activeVista === vistas.CHECKOUT ? "active" : ""
           }`}
