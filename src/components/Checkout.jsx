@@ -40,12 +40,12 @@ const Checkout = ({ carrito, datosCliente, setDatosCliente, onVolver }) => {
 
   return (
     <div className="checkout-container">
-      <button className="btn-volver" onClick={onVolver}>
-        ← Volver al Carrito
-      </button>
-
-      <h2>Checkout</h2>
-
+      <header className="hcheckout">
+        <button className="btn-volver" onClick={onVolver}>
+          Atras
+        </button>
+        <h2>Checkout</h2>
+      </header>
       <form onSubmit={handleFinalizar}>
         {/* 1. INFORMACIÓN BÁSICA */}
         <div className="form-section" id="dp">

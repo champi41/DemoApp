@@ -1,24 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap');
 
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   padding: 0;
   margin: 0;
   gap: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(211, 211, 211);
+  background-color: #111111;
   padding: 0;
 }
 :root{
   /* shadows */
-  --shadow-s: inset 0 1px 2px rgba(255, 255, 255, 0.25), /* top highlight */ 0 1px 2px rgba(0, 0, 0, 0.188),
-    /* dark shadow */ 0 2px 4px rgba(0, 0, 0, 0.082); /* soft shadow */
-  --shadow-m: inset 0 1px 2px rgba(255, 255, 255, 0.5), /* top highlight */ 0 2px 4px rgba(0, 0, 0, 0.188),
-    /* dark shadow */ 0 4px 8px rgba(0, 0, 0, 0.082); /* soft shadow */
-  --shadow-l: inset 0 1px 2px rgba(255, 255, 255, 0.75), /* top highlight */ 0 4px 6px rgba(0, 0, 0, 0.188),
-    /* dark shadow */ 0 6px 10px rgba(0, 0, 0, 0.082); /* soft shadow */
+  --shadow-s: inset 0 1px 2px rgba(255, 255, 255, 0.25),0 1px 2px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.1); 
+  --shadow-m: inset 0 1px 2px rgba(255, 255, 255, 0.5),0 2px 4px rgba(0, 0, 0, 0.25),
+     0 4px 8px rgba(0, 0, 0, 0.1); 
+  --shadow-l: inset 0 1px 2px rgba(255, 255, 255, 0.75),  0 4px 6px rgba(0, 0, 0, 0.25),
+     0 6px 10px rgba(0, 0, 0, 0.1); 
 }
 
 #root {
@@ -33,12 +33,14 @@ body {
 }
 .header {
   padding: 10px 10px;
+  color:#ff0300;
 }
 .categorias {
   display: flex;
   flex-direction: column;
   gap: 5px;
   padding-left: 10px;
+  color: #ffd396;
 }
 
 .listaCat {
@@ -52,20 +54,20 @@ body {
   padding: 10px 0;
 }
 .listaCat button {
-  background-color: #ffffff;
+  background-color: #1f1f1f;
   flex-shrink: 0;
   font-size: 20px;
   width: 150px;
   height: 60px;
   padding: 5px;
   border: none;
-  color: rgb(26, 26, 26);
+  color: white;
   box-shadow: var(--shadow-m);
   border-radius: 15px;
   transition: all 0.3s ease;
 }
 .Cat-button.active {
-  background-color: orangered;
+  background-color: #ff0300;
   color: white;
   transition: all 0.3s ease;
 }
@@ -77,7 +79,8 @@ body {
   padding: 0 10px;
 }
 .producto {
-  background-color: white;
+  background-color: #1f1f1f;
+  color: white;
   justify-content: space-between;
   display: flex;
   border-radius: 15px;
@@ -86,7 +89,7 @@ body {
   box-shadow: var(--shadow-m);
 }
 .precio {
-  color: orangered;
+  color: #ffd396;
 }
 .imagen {
   display: flex;
@@ -102,7 +105,8 @@ body {
   border-radius: 10px;
   font-size: 15px;
   padding: 5px;
-  background-color: orangered;
+  box-shadow: var(--shadow-m);
+  background-color: #ff0300;
   color: white;
 }
 .fondo {
@@ -122,7 +126,7 @@ body {
   background-color: rgba(255, 255, 255, 0);
   backdrop-filter: blur(5px);
   gap: 10px;
-  box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.75), 0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.25);;
+  box-shadow: var(--shadow-l);
   padding: 5px;
 }
 .barra button {
@@ -139,15 +143,16 @@ body {
 }
 .barra button p {
   font-size: 15px;
-  background-color: orangered;
-  color: white;
+  background-color: #ff0300;
+  color: #ffd396;
+  font-weight: 700;
   height: fit-content;
   padding: 0 4px;
   border-radius: 20px;
 }
 .barra .vista-button.active {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.75), 0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-s);
   transition: all 0.3s ease;
 }
 /* Posiciona la notificación */
@@ -171,11 +176,17 @@ body {
 }
 .carrito {
   padding: 10px 10px 90px;
+  color: white;
+}
+.carrito-vacio{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
 }
 .carrito h3 {
   font-size: 30px;
 }
-/* Diseño de cada ítem */
 .item-carrito {
   display: flex;
   align-items: center;
@@ -209,7 +220,7 @@ body {
 .btn-eliminar-item img {
   height: 25px;
 }
-/* Resumen de Costos */
+
 .resumen-costos {
   padding: 15px 0;
 }
@@ -220,16 +231,12 @@ body {
   margin-bottom: 8px;
 }
 
-.total-final {
-  font-size: 1.3em;
-  color: #007bff; /* Color de tu marca */
-}
 
 /* Botón Final (¡El más importante!) */
 .boton-final-pedido {
-  width: 100%;
+  width:100%;
   padding: 15px;
-  background-color: #25d366; /* Verde de WhatsApp para la conversión */
+  background-color: #ff0300;
   color: white;
   font-size: 1.1em;
   font-weight: bold;
@@ -263,19 +270,26 @@ body {
 .btn-volver {
   display: flex;
   width: fit-content;
+  height: fit-content;
   padding: 5px;
   border: none;
   border-radius: 7px;
-  background-color: orangered;
+  background-color: #ff0300;
   color: white;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-m);
   font-size: 15px;
 }
 .checkout-container {
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 10px 10px 90px;
+}
+.hcheckout{
+  align-items: center;
+  display: flex;
+  gap: 10px;
 }
 .checkout-container h2{
   font-size: 35px;
@@ -301,35 +315,49 @@ form {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 10px;
+  box-shadow: var(--shadow-s);
+  border-radius: 10px;
 }
 form input[type="text"] {
   font-size: 17px;
   padding: 5px;
   border-radius: 5px;
-  border: solid 1px rgba(0, 0, 0, 0.75);
+  background-color: #1f1f1f;
+  border: none;
+  box-shadow: var(--shadow-m);
 }
 form input[type="tel"] {
   font-size: 17px;
   padding: 5px;
   border-radius: 5px;
-  border: solid 1px rgba(0, 0, 0, 0.75);
+  background-color: #1f1f1f;
+  border: none;
+  box-shadow: var(--shadow-m);
 }
 #o{
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 10px;
+  box-shadow: var(--shadow-s);
+  border-radius: 10px;
 }
 #o input{
   font-size: 17px;
   padding: 5px;
   border-radius: 5px;
-  border: solid 1px rgba(0, 0, 0, 0.75);
+  background-color: #1f1f1f;
+  border: none;
+  box-shadow: var(--shadow-m);
 }
 #o textarea{
   font-size: 17px;
   padding: 5px;
   border-radius: 5px;
-  border: solid 1px rgba(0, 0, 0, 0.75);
+  background-color: #1f1f1f;
+  border: none;
+  box-shadow: var(--shadow-m);
 }
 #o label{
   font-size: 20px;
@@ -338,6 +366,9 @@ form input[type="tel"] {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 10px;
+  box-shadow: var(--shadow-s);
+  border-radius: 10px;
 }
 .metodos {
   display: flex;
@@ -348,13 +379,14 @@ form input[type="tel"] {
 }
 .metodos label span {
   padding: 5px;
-  border: solid 1px black;
+  border: none;
+  background-color: #1f1f1f;
+  box-shadow: var(--shadow-m);
   border-radius: 7px;
   transition: all 0.3s ease;
 }
 .metodos label input[type="radio"]:checked + span {
-  background-color: orangered;
-  border: solid 1px orangered;
+  background-color: #ff0300;
   color: white;
   transition: all 0.3s ease;
 }
@@ -362,6 +394,9 @@ form input[type="tel"] {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 10px;
+  box-shadow: var(--shadow-s);
+  border-radius: 10px;
 }
 .metodosP {
   display: flex;
@@ -372,13 +407,14 @@ form input[type="tel"] {
 }
 .metodosP label span {
   padding: 5px;
-  border: solid 1px black;
+  border: none;
+  background-color: #1f1f1f;
+  box-shadow: var(--shadow-m);
   border-radius: 7px;
   transition: all 0.3s ease;
 }
 .metodosP label input[type="radio"]:checked + span {
-  background-color: orangered;
-  border: solid 1px orangered;
+  background-color: #ff0300;
   color: white;
   transition: all 0.3s ease;
 }
@@ -391,6 +427,6 @@ form input[type="tel"] {
   padding: 5px;
   border-radius: 10px;
   border: none;
-  background-color: orangered;
+  background-color: #ff0300;
   color: white;
 }
